@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+
+  <body>
+    <h1>Ejercicio 2 - Nueva manera de programar JavaScript con jQuery.</h1>
+    <p id="parrafo1">fdsafsdfdsfsdfsdfsdfsdfsfsdfs</p>
+    <p id="parrafo2">asdasdfafdsfasfdewdfasdfdas</p>
+    <!--
+       <script>
+      let x = $(document);
+      x.ready(inicializarEventos);
+
+      function inicializarEventos() {
+        let x = $("#parrafo1");
+        x.click(presionParrafo1);
+      }
+
+      function presionParrafo1() {
+        let x = $("#parrafo1");
+        x.css("color", "red");
+      }
+    </script>
+-->
+
+    <br />
+
+    <h1>
+      Ejercicio 3 - Selección de un elemento del documento mediante el id.
+    </h1>
+    <table id="tabla">
+      <tr>
+        <th>HOLA</th>
+        <th>CHAU</th>
+      </tr>
+      <tr>
+        <td>CHAU</td>
+        <td>HOLA</td>
+      </tr>
+    </table>
+    <!--
+     <script>
+      let x = $(document);
+      x.ready(inicializarEventos);
+
+      function inicializarEventos() {
+        let x = $("#tabla");
+        x.click(presionTabla);
+      }
+      function presionTabla() {
+        let x = $("#tabla");
+        x.css("background-color", "yellow");
+      }
+    </script>
+-->
+
+    <h1>Ejercicio 4 - Selección de elementos por el tipo de elementos.</h1>
+    <ul>
+      <li>Elemento 1</li>
+      <li>Elemento 2</li>
+      <li>Elemento 3</li>
+      <li>Elemento 4</li>
+    </ul>
+    <!--
+       <script>
+      let x = $(document);
+      x.ready(clickEvento);
+      function clickEvento() {
+        let x = $("li");
+        x.click(liEvento);
+      }
+      function liEvento() {
+        let x = $(this);
+        x.hide();
+      }
+    </script>
+-->
+
+    <h1>Ejercicio 5 - Selección de elementos utilizando los selectores CSS.</h1>
+
+    <table class="tabla">
+      <tr>
+        <th class="fila1">Buenas</th>
+        <th class="fila2">Hola</th>
+        <th class="fila3">Chau</th>
+      </tr>
+    </table>
+    <br />
+    <table>
+      <tr>
+        <th>Buenas</th>
+        <th>Hola</th>
+        <th>Chau</th>
+      </tr>
+    </table>
+    <!--
+        <script>
+      let x = $(document);
+      x.ready(inicializarEventos);
+
+      function inicializarEventos() {
+        let x = $(".tabla");
+        x.click(resaltar);
+      }
+      function resaltar() {
+        let f1 = $(".fila1");
+        f1.css("background-color", "red");
+        let f2 = $(".fila2");
+        f2.css("background-color", "blue");
+        let f3 = $(".fila3");
+        f3.css("background-color", "yellow");
+      }
+    </script>
+-->
+
+    <h1>
+      Ejercicio 6 - Selección de elementos utilizando las clases CSS definidas.
+    </h1>
+
+    <h1>MESSI</h1>
+    <div class="p_messi">
+      <p>
+        Lionel Andrés Messi Cuccittini (Rosario, 24 de junio de 1987), más
+        conocido como Leo Messi, es un futbolista argentino que juega como
+        delantero o centrocampista. Desde el 2023, integra el plantel del Inter
+        Miami de la MLS estadounidense. Es también internacional con la
+        selección de Argentina, de la que es capitán.
+      </p>
+    </div>
+    <h1>CR7</h1>
+    <div class="p_cr7">
+      <p>
+        Cristiano Ronaldo dos Santos Aveiro (Funchal, Madeira, 5 de febrero de
+        1985), conocido como Cristiano Ronaldo, es un futbolista portugués.
+        Juega como extremo izquierdo o delantero y su equipo actual es el
+        Al-Nassr F. C. de la Liga Profesional Saudí.18​ Es internacional
+        absoluto con la selección de Portugal, de la cual es capitán, máximo
+        goleador histórico y jugador con más presencias con 201 partidos, logro
+        alcanzado en las eliminatorias para la Eurocopa 2024, reconocido por el
+        Libro Guinness de los récords.19​
+      </p>
+    </div>
+    <h1>Lionel Scaloni</h1>
+    <div class="p_scaloni">
+      <p>
+        Lionel Sebastián Scaloni (Pujato, Santa Fe, 16 de mayo de 1978) es un
+        exfutbolista y entrenador argentino. Desde el 2018 dirige la selección
+        argentina. Como futbolista se desempeñaba como lateral derecho o
+        centrocampista. Como entrenador es reconocido por ganar varios títulos
+        con Argentina, entre ellos el Mundial de Catar 2022 y la Copa América
+        2021. Además, logró el tercer puesto en la Copa América 2019 y el mayor
+        invicto en la historia del seleccionado argentino (36 partidos).4​
+      </p>
+    </div>
+    <hr />
+    <button id="boton1">Cambiar fuente noticia MESSI</button>
+    <button id="boton2">Cambiar fuente noticia CR7</button>
+    <button id="boton3">Cambiar fuente noticia Lionel Scaloni</button>
+    <!--
+    <script>
+      let x = $(document);
+      x.ready(inicializarEventos);
+
+      function inicializarEventos() {
+        let b1 = $("#boton1");
+        b1.click(cambiarFuenteMessi);
+        let b2 = $("#boton2");
+        b2.click(cambiarFuenteCR7);
+        let b3 = $("#boton3");
+        b3.click(cambiarFuenteScaloni);
+      }
+      function cambiarFuenteMessi() {
+        let fuenteMessi = $(".p_messi");
+        fuenteMessi.css("font-size", "xx-small");
+      }
+      function cambiarFuenteCR7() {
+        let fuenteCR7 = $(".p_cr7");
+        fuenteCR7.css("font-size", "large");
+      }
+      function cambiarFuenteScaloni() {
+        let fuenteScaloni = $(".p_scaloni");
+        fuenteScaloni.css("font-size", "xxx-large");
+      }
+    </script>
+-->
+
+    <h1>Ejercicio 7 - Método text(), text(valor).</h1>
+    <table class="tablaContenido">
+      <tr>
+        <th>Buenas</th>
+        <th>Hola</th>
+        <th>Chau</th>
+      </tr>
+      <tr>
+        <td>Buenas</td>
+        <td>Hola</td>
+        <td>Chau</td>
+      </tr>
+      <tr>
+        <td>Buenas</td>
+        <td>Hola</td>
+        <td>Chau</td>
+      </tr>
+    </table>
+    <br />
+    <table>
+      <tr>
+        <th>Buenas</th>
+        <th>Hola</th>
+        <th>Chau</th>
+      </tr>
+      <tr>
+        <td>Buenas</td>
+        <td>Hola</td>
+        <td>Chau</td>
+      </tr>
+      <tr>
+        <td>Buenas</td>
+        <td>Hola</td>
+        <td>Chau</td>
+      </tr>
+    </table>
+    <button id="cambiarContenido">Cambiar Contenido Primer Tabla</button>
+<!--
+     <script>
+      let x = $(document);
+      x.ready(inicializarEventos);
+
+      function inicializarEventos() {
+        let boton = $("#cambiarContenido");
+        boton.click(cambiarContenido);
+      }
+      function cambiarContenido() {
+        let tabla1 = $(".tablaContenido");
+        tabla1.text("-----");
+      }
+    </script>
+-->
+   
+
+    <h1>
+      Ejercicio 8 - Métodos attr(nombre de propiedad), attr(nombre de
+      propiedad,valor) y removeAttr(nombre de propiedad)
+    </h1>
+
+    <a href="#">Hipervínculo</a>
+  </body>
+</html>
