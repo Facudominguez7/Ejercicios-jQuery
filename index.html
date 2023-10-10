@@ -227,7 +227,7 @@
       </tr>
     </table>
     <button id="cambiarContenido">Cambiar Contenido Primer Tabla</button>
-<!--
+    <!--
      <script>
       let x = $(document);
       x.ready(inicializarEventos);
@@ -242,13 +242,134 @@
       }
     </script>
 -->
-   
 
     <h1>
       Ejercicio 8 - Métodos attr(nombre de propiedad), attr(nombre de
       propiedad,valor) y removeAttr(nombre de propiedad)
     </h1>
 
-    <a href="#">Hipervínculo</a>
+    <a class="hipervinculo" href="#">Hipervínculo</a>
+    <hr />
+    <button id="botonUCP">Campus UCP</button>
+    <button id="botonLogin">Login Alumnos</button>
+    <button id="botonNetflix">Netflix</button>
+    <!--
+   <script>
+      let x = $("document");
+      x.ready(inicializarEventos);
+
+      function inicializarEventos(){
+        let x = $("#botonUCP");
+        x.click(irUCP);
+        x = $("#botonLogin");
+        x.click(irLogin);
+        x = $("#botonNetflix");
+        x.click(irNetflix);
+      }
+      function irUCP (){
+        let x = $(".hipervinculo");
+        x.attr("href", "https://campus.ucp.edu.ar/login/index.php");
+        x.text("Campus UCP");
+      }
+      function irLogin(){
+        let x = $(".hipervinculo");
+        x.attr("href", "https://sistemacuenca.ucp.edu.ar/alumnosnotas/");
+        x.text("Login Alumnos UCP");
+      }
+      function irNetflix(){
+        let x = $(".hipervinculo");
+        x.attr("href", "https://www.netflix.com/ar/login?nextpage=https%3A%2F%2Fwww.netflix.com%2Fbrowse");
+        x.text("Netflix");
+      }
+    </script>
+-->
+
+    <h1>Ejercicio 9 - Métodos addClass y removeClass.</h1>
+    <table id="ejercicio9">
+      <thead class="theadEjercicio9">
+        <th>Fabio</th>
+        <th>Martin</th>
+        <th>Facundo</th>
+      </thead>
+      <tbody class="tbodyEjercicio9">
+        <td>Luciano</td>
+        <td>Octavio</td>
+        <td>Milagros</td>
+      </tbody>
+    </table>
+    <hr />
+
+    <button id="asociar">Asociar Clase</button>
+    <button id="desasociar">Desasociar Clase</button>
+    <!--
+     <script>
+      let x = $(document);
+      x.ready(inicializarEventos);
+
+      function inicializarEventos(){
+        let x = $("#asociar");
+        x.click(asociarClase);
+        x = $("#desasociar");
+        x.click(desasociarClase);
+      }
+      function asociarClase(){
+        let x = $("#ejercicio9");
+        x.addClass("asociarClase");
+      }
+      function desasociarClase(){
+        let x = $("#ejercicio9");
+        x.removeClass("asociarClase");
+      }
+    </script>
+-->
+
+    <h1>Ejercicio 10 - Método html() y html(valor)</h1>
+    <hr />
+    
+    <button id="boton1">Mostrar Contenido</button>
+    <button id="boton2">Mostrar alert</button>
+    <div id="formulario">
+
+    </div>
+   
+    
+
+    <script>
+      let x = $(document);
+      x.ready(inicializarEventos);
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+      function inicializarEventos() {
+        let x = $("#boton1");
+        x.click(contenidoHtml);
+        x = $("#boton2");
+        x.click(alertCabecera);
+      }
+
+      function contenidoHtml() {
+        let x = $("#formulario");
+        x.html(
+          '<form>Ingrese nombre:<input type="text" id = "nombre" >' +
+            '<br>Ingrese clave:<input type="text" id="clave"><br>' +
+            '<input type="submit" value="confirmar"></form>'
+        );
+      }
+      function alertCabecera() {
+        let x = $("#formulario");
+        alert(x.html());
+      }
+    </script>
   </body>
 </html>
