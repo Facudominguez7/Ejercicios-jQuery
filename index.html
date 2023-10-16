@@ -325,32 +325,15 @@
 
     <h1>Ejercicio 10 - Método html() y html(valor)</h1>
     <hr />
-    
+
     <button id="boton1">Mostrar Contenido</button>
     <button id="boton2">Mostrar alert</button>
-    <div id="formulario">
-
-    </div>
-   
-    
-
-    <script>
+    <div id="formulario"></div>
+    <!--
+  <script>
       let x = $(document);
       x.ready(inicializarEventos);
 
-
-
-
-
-
-
-
-
-
-
-
-
-      
       function inicializarEventos() {
         let x = $("#boton1");
         x.click(contenidoHtml);
@@ -371,5 +354,199 @@
         alert(x.html());
       }
     </script>
+-->
+    <h1>Ejercicio 11 - Administración de eventos con jQuery</h1>
+
+    <p>
+      Luego de un mes de poca actividad futbolística por resentirse de una vieja
+      lesión muscular en el isquiotibial derecho, Lionel Messi se siente cada
+      vez mejor y es por eso que integrará el plantel
+      <strong>“albiceleste”</strong> que viajará rumbo a Lima para enfrentar a
+      Perú, por la cuarta fecha de las Eliminatorias Sudamericanas rumbo al
+      Mundial 2026 que se jugará en Estados Unidos, México y Canadá.
+    </p>
+    <!--
+       <script>
+      let x = $(document);
+      x.ready(inicializarEventos);
+
+      function inicializarEventos(){
+        let x = $("strong");
+        x.click(ocultarPalabra);
+      }
+      function ocultarPalabra(){
+        let x = $("strong");
+        x.hide();
+      }
+    </script>
+    -->
+    <hr />
+    <h1>Ejercicio 12 - Eventos mouseover y mouseout</h1>
+
+    <table id="a">
+      <tr>
+        <td>Messi</td>
+        <td>De Paul</td>
+      </tr>
+      <tr>
+        <td>Cuti</td>
+        <td>Enzo</td>
+      </tr>
+    </table>
+    <!--
+    <script>
+       let x = $(document);
+      x.ready(inicializarEventos);
+
+      function inicializarEventos(){
+        let x = $("#a");
+        x.mouseover(entraMouse);
+        x.mouseout(saleMouse);
+      }
+      function entraMouse(){
+        let x = $("#a");
+        x.css("background-color", "red");
+      }
+      function saleMouse(){
+        let x = $("#a");
+        x.css("background-color", "yellow");
+      }
+    </script>
+     -->
+    <hr />
+    <h1>Ejercicio 13 - Evento Hover</h1>
+    <table id="b">
+      <tr>
+        <td>Messi</td>
+        <td>De Paul</td>
+      </tr>
+      <tr>
+        <td>Cuti</td>
+        <td>Enzo</td>
+      </tr>
+    </table>
+    <!--
+    <script>
+      let x = $(document);
+      x.ready(inicializarEventos);
+
+      function inicializarEventos() {
+        let x = $("#b");
+        x.hover(entraMouse, saleMouse);
+      }
+      function entraMouse() {
+        let x = $("#b");
+        x.css("background-color", "red");
+      }
+      function saleMouse() {
+        let x = $("#b");
+        x.css("background-color", "yellow");
+      }
+    </script>
+    -->
+    <hr />
+    <h1>Ejercicio 14 - Eventos mousemove</h1>
+    <div id="recuadro" style="width: 200px; background-color: blue">
+      asdaaaaaaaaa
+    </div>
+    <p id="coordenada"></p>
+    <!--
+    <script>
+      let x = $(document);
+      x.ready(inicializarEventos);
+
+      function inicializarEventos() {
+        let x = $("#recuadro");
+        x.mousemove(moverMouse);
+        x = $("#recuadro");
+        x.mouseout(saleMouse);
+      }
+      function moverMouse() {
+        let x = $("#coordenada");
+        x.text("(" + event.clientX + "," + event.clientY + ")");
+      }
+      function saleMouse() {
+        let x = $("#coordenada");
+        x.text("Flecha fuera del recuadro");
+      }
+    </script>
+    -->
+    <hr />
+    <h1>Ejercicio 15 - Eventos mousedown y mousedown</h1>
+    <button id="boton1">Boton 1</button>
+    <button id="boton2">Boton 2</button>
+    <!--
+    <script>
+      let x = $(document);
+      x.ready(inicializarEventos);
+
+      function inicializarEventos() {
+        let x = $("#boton1");
+        x.mousedown(presionaMouse);
+        x.mouseup(sueltaMouse);
+        x = $("#boton2");
+        x.mousedown(presionaMouse);
+        x.mouseup(sueltaMouse);
+      }
+      function presionaMouse() {
+        $(this).css("background-color", "#fffff0");
+      }
+      function sueltaMouse() {
+        $(this).css("background-color", "#D4D0C8");
+      }
+    </script>
+    -->
+    <hr />
+    <h1>Ejercicio 16 - Evento dblclick</h1>
+    <div
+      id="midiv"
+      style="width: 800px; height: 70px; background-color: brown"
+    ></div>
+    <!--
+    <script>
+      let x = $(document);
+      x.ready(inicializarEventos);
+      let estado = 1;
+
+      function inicializarEventos() {
+        let x = $("#midiv");
+        x.dblclick(dobleClick);
+      }
+      function dobleClick() {
+        let x = $("#midiv");
+        if (estado == 1) {
+          x.css("width", "250px");
+          x.css("height", "250px");
+          estado = 0;
+        } else {
+          x.css("width", "800px");
+          x.css("height", "70px");
+          estado = 1;
+        }
+      }
+    </script>
+     -->
+    <hr />
+    <h1>Ejercicio 17 - Evento focus</h1>
+    <input type="text" id="input1" style="color: blue" />
+    <input type="text" id="input2" style="color: blue" />
+    <!--
+     <script>
+      let x = $(document);
+      x.ready(inicializarEventos);
+
+      function inicializarEventos(){
+        let x = $("#input1");
+        x.focus(tomaFoco);
+        x = $("#input2");
+        x.focus(tomaFoco);
+      }
+      function tomaFoco(){
+        $(this).css("color", "red");
+      }
+     </script>
+     -->
+    <hr />
+    <h1></h1>
   </body>
 </html>
